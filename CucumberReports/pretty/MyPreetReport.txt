@@ -1,0 +1,31 @@
+@user1
+Feature: Create or Delete Calendar Event
+  Agile Story:
+  As a event manager
+  I should be able to create/delete the event on Calendar
+
+  Background:                                       [90m# src/test/resources/features/CalendarEvent.feature:8[0m
+    [32mGiven [0m[32mI logged in as an Event manager[0m           [90m# CalendarEventStepDef.i_logged_in_as_an_Event_manager()[0m
+    [32mWhen [0m[32mI navigate to Calendar module[0m              [90m# CalendarEventStepDef.i_navigate_to_Calendar_module()[0m
+    [32mThen [0m[32mthe page title should be [0m[32m[1m"Meetings - Odoo"[0m [90m# CalendarEventStepDef.the_page_title_should_be(String)[0m
+
+  @user1
+  Scenario: Create an event on Calendar                 [90m# src/test/resources/features/CalendarEvent.feature:14[0m
+    [32mGiven [0m[32mI am on Calendar page[0m                         [90m# CalendarEventStepDef.i_am_on_Calendar_page()[0m
+    [32mWhen [0m[32mI click on any date on Calendar[0m                [90m# CalendarEventStepDef.i_click_on_any_date_on_Calendar()[0m
+    [32mThen [0m[32mCreate window should display[0m                   [90m# CalendarEventStepDef.create_window_should_display()[0m
+    [32mAnd [0m[32mI write [0m[32m[1m"event"[0m[32m and click on create[0m             [90m# CalendarEventStepDef.i_write_and_click_on_create(String)[0m
+    [32mThen [0m[32mnew event should be displayed on Calendar page[0m [90m# CalendarEventStepDef.new_event_should_be_displayed_on_Calendar_page()[0m
+
+  Background:                                       [90m# src/test/resources/features/CalendarEvent.feature:8[0m
+    [32mGiven [0m[32mI logged in as an Event manager[0m           [90m# CalendarEventStepDef.i_logged_in_as_an_Event_manager()[0m
+    [32mWhen [0m[32mI navigate to Calendar module[0m              [90m# CalendarEventStepDef.i_navigate_to_Calendar_module()[0m
+    [32mThen [0m[32mthe page title should be [0m[32m[1m"Meetings - Odoo"[0m [90m# CalendarEventStepDef.the_page_title_should_be(String)[0m
+
+  @user1
+  Scenario: Delete a created event               [90m# src/test/resources/features/CalendarEvent.feature:21[0m
+    [32mGiven [0m[32mI am on Calendar page[0m                  [90m# CalendarEventStepDef.i_am_on_Calendar_page()[0m
+    [32mWhen [0m[32mI clicked on created event[0m              [90m# CalendarEventStepDef.i_clicked_on_created_event()[0m
+    [32mThen [0m[32mCreate window should display[0m            [90m# CalendarEventStepDef.create_window_should_display()[0m
+    [32mAnd [0m[32mI click on delete[0m                        [90m# CalendarEventStepDef.i_click_on_delete()[0m
+    [32mThen [0m[32mevent should be dissapear from Calendar[0m [90m# CalendarEventStepDef.event_should_be_dissapear_from_Calendar()[0m

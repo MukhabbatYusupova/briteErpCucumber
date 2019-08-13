@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="12.107701">
+    <testcase classname="Create or Delete Calendar Event" name="Create an event on Calendar" time="6.538776">
+        <system-out>
+            <![CDATA[Given I logged in as an Event manager.......................................passed
+When I navigate to Calendar module..........................................passed
+Then the page title should be "Meetings - Odoo".............................passed
+Given I am on Calendar page.................................................passed
+When I click on any date on Calendar........................................passed
+Then Create window should display...........................................passed
+And I write "event" and click on create.....................................passed
+Then new event should be displayed on Calendar page.........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create or Delete Calendar Event" name="Delete a created event" time="5.568925">
+        <system-out>
+            <![CDATA[Given I logged in as an Event manager.......................................passed
+When I navigate to Calendar module..........................................passed
+Then the page title should be "Meetings - Odoo".............................passed
+Given I am on Calendar page.................................................passed
+When I clicked on created event.............................................passed
+Then Create window should display...........................................passed
+And I click on delete.......................................................passed
+Then event should be dissapear from Calendar................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
